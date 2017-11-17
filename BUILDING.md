@@ -76,6 +76,12 @@ The following procedure will build libjpeg-turbo on Unix and Unix-like systems.
 NOTE: Running autoreconf in the source directory is not necessary if building
 libjpeg-turbo from one of the official release tarballs.
 
+###Build for ARM
+    setup ARM compile envirement correctly. I use AXIS package.
+    mkdir build-arm
+    sh {source_directory}/configure --host=arm-axis-linux-gnueabihf CC=arm-axis-linux-gnueabihf-gcc AR=arm-axis-linux-gnueabihf-ar STRIP=arm-axis-linux-gnueabihf-strip RANLIB=arm-axis-linux-gnueabihf-ranlib
+    make
+
 This will generate the following files under **.libs/**:
 
 **libjpeg.a**<br>
